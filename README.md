@@ -18,18 +18,18 @@
 
 
 ```java
-package com.tencentcloud.wemeet.example;
+package com.tencentcloudapi.wemeet.example;
 
-import com.tencentcloud.wemeet.Client;
-import com.tencentcloud.wemeet.core.Constants;
-import com.tencentcloud.wemeet.core.authenticator.AuthenticatorBuilder;
-import com.tencentcloud.wemeet.core.authenticator.JWTAuthenticator;
-import com.tencentcloud.wemeet.core.exception.ClientException;
-import com.tencentcloud.wemeet.core.exception.ServiceException;
-import com.tencentcloud.wemeet.core.xhttp.DefaultHttpClient;
-import com.tencentcloud.wemeet.core.xhttp.HttpClient;
-import com.tencentcloud.wemeet.service.meetings.api.MeetingsApi;
-import com.tencentcloud.wemeet.service.meetings.model.V1MeetingsPostRequest;
+import com.tencentcloudapi.wemeet.Client;
+import core.com.tencentcloudapi.wemeet.Constants;
+import authenticator.core.com.tencentcloudapi.wemeet.AuthenticatorBuilder;
+import authenticator.core.com.tencentcloudapi.wemeet.JWTAuthenticator;
+import exception.core.com.tencentcloudapi.wemeet.ClientException;
+import exception.core.com.tencentcloudapi.wemeet.ServiceException;
+import xhttp.core.com.tencentcloudapi.wemeet.DefaultHttpClient;
+import xhttp.core.com.tencentcloudapi.wemeet.HttpClient;
+import api.meetings.service.com.tencentcloudapi.wemeet.MeetingsApi;
+import model.meetings.service.com.tencentcloudapi.wemeet.V1MeetingsPostRequest;
 
 import java.security.SecureRandom;
 
