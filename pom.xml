@@ -136,4 +136,8 @@
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
+
+    <name>TencentOpenApiSdk</name>
+    <description>TencentOpenApiSdk</description>
+    <url>https://github.com/TencentCloud/wemeet-openapi-sdk-java</url>
 </project>
