@@ -10,7 +10,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>wemeet-openapi</module>
-        <module>example</module>
     </modules>
 
     <properties>
