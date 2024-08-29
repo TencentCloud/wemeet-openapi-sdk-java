@@ -5,9 +5,14 @@ import com.tencentcloudapi.wemeet.core.Constants;
 import com.tencentcloudapi.wemeet.core.xhttp.DefaultHttpClient;
 import com.tencentcloudapi.wemeet.core.xhttp.HttpClient;
 import com.tencentcloudapi.wemeet.service.meetings.api.MeetingsApi;
-import com.tencentcloudapi.wemeet.service.records.api.RecordsApi;
+import com.tencentcloudapi.wemeet.service.application_group.api.ApplicationGroupApi;
 import com.tencentcloudapi.wemeet.service.meeting_control.api.MeetingControlApi;
+import com.tencentcloudapi.wemeet.service.user_manager.api.UserManagerApi;
+import com.tencentcloudapi.wemeet.service.records.api.RecordsApi;
+import com.tencentcloudapi.wemeet.service.record_intelligence.api.RecordIntelligenceApi;
 import com.tencentcloudapi.wemeet.service.meeting_guest.api.MeetingGuestApi;
+import com.tencentcloudapi.wemeet.service.meeting_room.api.MeetingRoomApi;
+import com.tencentcloudapi.wemeet.service.layout.api.LayoutApi;
 
 
 public class Client {
@@ -16,9 +21,14 @@ public class Client {
 
     // service interfaces
     private MeetingsApi meetings;
-    private RecordsApi records;
+    private ApplicationGroupApi application_group;
     private MeetingControlApi meeting_control;
+    private UserManagerApi user_manager;
+    private RecordsApi records;
+    private RecordIntelligenceApi record_intelligence;
     private MeetingGuestApi meeting_guest;
+    private MeetingRoomApi meeting_room;
+    private LayoutApi layout;
 
     private Client() {}
 
@@ -100,9 +110,14 @@ public class Client {
 
             // 注册服务
             client.meetings = new MeetingsApi(client.config);
-            client.records = new RecordsApi(client.config);
+            client.application_group = new ApplicationGroupApi(client.config);
             client.meeting_control = new MeetingControlApi(client.config);
+            client.user_manager = new UserManagerApi(client.config);
+            client.records = new RecordsApi(client.config);
+            client.record_intelligence = new RecordIntelligenceApi(client.config);
             client.meeting_guest = new MeetingGuestApi(client.config);
+            client.meeting_room = new MeetingRoomApi(client.config);
+            client.layout = new LayoutApi(client.config);
             return client;
         }
     }
@@ -111,15 +126,35 @@ public class Client {
         return this.meetings;
     }
 
-    public RecordsApi records() {
-        return this.records;
+    public ApplicationGroupApi application_group() {
+        return this.application_group;
     }
 
     public MeetingControlApi meeting_control() {
         return this.meeting_control;
     }
 
+    public UserManagerApi user_manager() {
+        return this.user_manager;
+    }
+
+    public RecordsApi records() {
+        return this.records;
+    }
+
+    public RecordIntelligenceApi record_intelligence() {
+        return this.record_intelligence;
+    }
+
     public MeetingGuestApi meeting_guest() {
         return this.meeting_guest;
+    }
+
+    public MeetingRoomApi meeting_room() {
+        return this.meeting_room;
+    }
+
+    public LayoutApi layout() {
+        return this.layout;
     }
 }

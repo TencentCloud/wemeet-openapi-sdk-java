@@ -96,7 +96,9 @@ public final class DefaultHttpClient implements HttpClient {
         // 序列化请求体
         RequestBody body = null;
         if (req.getBody() != null) {
-            if (serializer != null) {
+            if (req.getBody() instanceof RequestBody){
+                body = (RequestBody) req.getBody();
+            }else if (serializer != null) {
                 byte[] data = serializer.Serialize(req.getBody());
                 body = RequestBody.create(data);
             } else if (req.getBody() instanceof Byte[] ||

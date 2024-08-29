@@ -2,9 +2,6 @@ package com.tencentcloudapi.wemeet.core.xhttp;
 
 import okhttp3.Request;
 
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-
 /**
  * Authentication 鉴权能力
  */

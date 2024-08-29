@@ -139,7 +139,8 @@ public class JWTAuthenticator implements Authentication {
      */
     private String signature(Request.Builder req) throws InvalidKeyException, NoSuchAlgorithmException {
         String reqBody = "";
-        if (req.getBody$okhttp() != null) {
+
+        if (req.getBody$okhttp() != null && !(req.getBody$okhttp() instanceof okhttp3.MultipartBody)) {
             reqBody = new String(this.readRequestBody(req));
         }
 
