@@ -4,5 +4,5 @@ public final class Version {
 
     private Version() {}
 
-    public static final String VERSION = "openapi-sdk-java/v1.0.2";
+    public static final String VERSION = "openapi-sdk-java/v1.0.3";
 }
