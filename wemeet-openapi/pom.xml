@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.tencentcloudapi.wemeet</groupId>
         <artifactId>wemeet-openapi-sdk-java</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.3</version>
     </parent>
 
     <artifactId>wemeet-openapi-sdk</artifactId>
