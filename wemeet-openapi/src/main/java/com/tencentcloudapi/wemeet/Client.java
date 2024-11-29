@@ -11,7 +11,6 @@ import com.tencentcloudapi.wemeet.service.user_manager.api.UserManagerApi;
 import com.tencentcloudapi.wemeet.service.records.api.RecordsApi;
 import com.tencentcloudapi.wemeet.service.record_intelligence.api.RecordIntelligenceApi;
 import com.tencentcloudapi.wemeet.service.meeting_guest.api.MeetingGuestApi;
-import com.tencentcloudapi.wemeet.service.pstn.api.PstnApi;
 import com.tencentcloudapi.wemeet.service.meeting_room.api.MeetingRoomApi;
 import com.tencentcloudapi.wemeet.service.layout.api.LayoutApi;
 
@@ -28,7 +27,6 @@ public class Client {
     private RecordsApi records;
     private RecordIntelligenceApi record_intelligence;
     private MeetingGuestApi meeting_guest;
-    private PstnApi pstn;
     private MeetingRoomApi meeting_room;
     private LayoutApi layout;
 
@@ -118,7 +116,6 @@ public class Client {
             client.records = new RecordsApi(client.config);
             client.record_intelligence = new RecordIntelligenceApi(client.config);
             client.meeting_guest = new MeetingGuestApi(client.config);
-            client.pstn = new PstnApi(client.config);
             client.meeting_room = new MeetingRoomApi(client.config);
             client.layout = new LayoutApi(client.config);
             return client;
@@ -151,10 +148,6 @@ public class Client {
 
     public MeetingGuestApi meeting_guest() {
         return this.meeting_guest;
-    }
-
-    public PstnApi pstn() {
-        return this.pstn;
     }
 
     public MeetingRoomApi meeting_room() {
