@@ -76,6 +76,15 @@ public class V1UsersPostRequest {
     }
 
     /**
+     * @param userid  (required)
+     * @param username  (required)
+     */
+    public V1UsersPostRequest(@NotNull String userid, @NotNull String username) {
+        this.userid = userid;
+        this.username = username;
+    }
+
+    /**
      * @param area 
      */
     public V1UsersPostRequest area(String area) {
