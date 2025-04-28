@@ -177,7 +177,7 @@ public class JWTAuthenticator implements Authentication {
     private String getUriPath(Request.Builder req) {
         if (req.getUrl$okhttp() != null) {
             URI uri = req.getUrl$okhttp().uri();
-            return uri.getPath() + (uri.getRawQuery() == null || uri.getRawQuery().isEmpty() ? "" :  "?" + uri.getRawQuery());
+            return uri.getPath() + (uri.getRawQuery() == null || uri.getRawQuery().isEmpty() ? "" :  "?" + uri.getQuery());
         }
        return  "";
     }
