@@ -6,7 +6,7 @@
 
     <groupId>com.tencentcloudapi.wemeet</groupId>
     <artifactId>wemeet-openapi-sdk-java</artifactId>
-    <version>1.0.7</version>
+    <version>1.0.9</version>
     <packaging>pom</packaging>
     <modules>
         <module>wemeet-openapi</module>
