@@ -42,6 +42,9 @@ public class V1MeetingsPost200ResponseMeetingInfoListInnerLiveConfig {
     @JsonProperty(value = "live_summary")
     private String liveSummary;
 
+    @JsonProperty(value = "live_addr")
+    private String liveAddr;
+
     @JsonProperty(value = "live_watermark")
     private V1MeetingsPost200ResponseMeetingInfoListInnerLiveConfigLiveWatermark liveWatermark;
 
@@ -206,12 +209,13 @@ public class V1MeetingsPost200ResponseMeetingInfoListInnerLiveConfig {
             Objects.equals(this.livePassword, v1MeetingsPost200ResponseMeetingInfoListInnerLiveConfig.livePassword) &&
             Objects.equals(this.liveSubject, v1MeetingsPost200ResponseMeetingInfoListInnerLiveConfig.liveSubject) &&
             Objects.equals(this.liveSummary, v1MeetingsPost200ResponseMeetingInfoListInnerLiveConfig.liveSummary) &&
+            Objects.equals(this.liveAddr, v1MeetingsPost200ResponseMeetingInfoListInnerLiveConfig.liveAddr) &&
             Objects.equals(this.liveWatermark, v1MeetingsPost200ResponseMeetingInfoListInnerLiveConfig.liveWatermark);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(enableLiveIm, enableLivePassword, enableLiveReplay, livePassword, liveSubject, liveSummary, liveWatermark);
+        return Objects.hash(enableLiveIm, enableLivePassword, enableLiveReplay, livePassword, liveSubject, liveSummary,liveAddr, liveWatermark);
     }
 
     /**
@@ -235,9 +239,18 @@ public class V1MeetingsPost200ResponseMeetingInfoListInnerLiveConfig {
         sb.append("    livePassword: ").append(toIndentedString(livePassword)).append("\n");
         sb.append("    liveSubject: ").append(toIndentedString(liveSubject)).append("\n");
         sb.append("    liveSummary: ").append(toIndentedString(liveSummary)).append("\n");
+        sb.append("    liveAddr: ").append(toIndentedString(liveAddr)).append("\n");
         sb.append("    liveWatermark: ").append(toIndentedString(liveWatermark)).append("\n");
         sb.append("}");
         return sb.toString();
+    }
+
+    public String getLiveAddr() {
+        return liveAddr;
+    }
+
+    public void setLiveAddr(String liveAddr) {
+        this.liveAddr = liveAddr;
     }
 }
 
