@@ -11,6 +11,7 @@
 
     <artifactId>wemeet-openapi-sdk</artifactId>
     <version>v1.0.12</version>
+    <name>TencentOpenApiSdk</name>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
